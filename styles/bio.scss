@@ -1,27 +1,114 @@
-@media only screen and (min-width: 320px) {
-}
-@media only screen and (min-width: 768px) {
-}
-@media only screen and (min-width: 1200px) {
-}
-$primary-color: #FFFFFF;
+@use "./partials/mixins" as *;
+@use "./partials/typography" as *;
+
+$primary-color: #ffffff;
 $secondary-color: #323232;
 
-
+body {
+  font-family: avenir;
+}
 
 .navbar {
   color: $primary-color;
   background-color: $secondary-color;
   text-decoration: none;
   display: flex;
-  margin: 0;
-  padding: 0;
+  flex-direction: column;
   align-items: center;
+
+  &__logo {
+    height: 24px;
+    font-size: 1.5em;
+  }
+
+  &__items {
+    width: 100%;
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+
+      & li {
+        &__active {
+          padding-bottom: 0.8rem;
+          border-bottom: 4px white solid;
+          width: 50%;
+          text-align: center;
+
+          @include tablet {
+            padding-bottom: 34px;
+            border-bottom: 4px white solid;
+          }
+        }
+
+        & a {
+          text-decoration: none;
+          color: $primary-color;
+          font-size: small;
+          text-align: center;
+        }
+      }
+    }
+  }
 }
 
-.navbar__items {
-    color: $primary-color;
-    text-decoration: none;
-    display: flex;
-    flex-direction: row;
+.image-container {
+  position: relative;
+  width: 100%;
+  text-align: center;
+
+  &__image {
+    width: 100%;
+    height: auto;
+  }
+
+  &__centered-text {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__text {
+    display: none;
+    font-size: 80px;
+    color: #fff;
+    padding: 10px;
+  }
+}
+
+.footer {
+  margin: 0%;
+
+  &__contacts {
+    margin: 0%;
+
+    &--person {
+      margin: 0%;
+    }
+  }
+}
+
+.gallery {
+  margin: 0%;
+
+  &__name {
+    margin: 0%;
+
+    &--images {
+      @include tablet {
+        margin: 0%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      img {
+        @include tablet {
+          width: calc(33.33% - 10px);
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
 }
