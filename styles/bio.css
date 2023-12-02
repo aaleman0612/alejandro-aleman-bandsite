@@ -1,0 +1,16 @@
+.navbar {
+  color: #FFFFFF;
+  background-color: #323232;
+  text-decoration: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.navbar__items {
+  color: #FFFFFF;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+}/*# sourceMappingURL=bio.css.map */
