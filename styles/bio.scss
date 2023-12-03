@@ -252,3 +252,78 @@ body {
     }
   }
 }
+
+.footer {
+  background-color: $secondary-color;
+  color: $primary-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & h1 {
+    padding: 0;
+    padding-top: 22px;
+
+    @include tablet {
+      padding-top: 16px;
+    }
+  }
+
+  &__div {
+    display: flex;
+    flex-direction: column;
+
+    &__GIT {
+      @include tablet {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+    }
+  }
+
+  & span {
+    padding-top: 0;
+    padding-bottom: 10px;
+  }
+
+  & p {
+    padding-bottom: 0;
+  }
+
+  & h3 {
+    padding-bottom: 16px;
+  }
+
+  & h4 {
+    padding-top: 19px;
+    padding-bottom: 0;
+  }
+
+  &__list {
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 90%;
+    }
+  }
+}
+
+.bandsite {
+  &__down {
+    padding-top: 60px;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__up {
+    display: none;
+
+    @include tablet {
+      display: flex;
+    }
+  }
+}

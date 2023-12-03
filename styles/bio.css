@@ -244,4 +244,71 @@ body ul {
     width: calc(33.33% - 10px);
     margin-bottom: 10px;
   }
+}
+
+.footer {
+  background-color: #323232;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer h1 {
+  padding: 0;
+  padding-top: 22px;
+}
+@media (min-width: 768px) {
+  .footer h1 {
+    padding-top: 16px;
+  }
+}
+.footer__div {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .footer__div__GIT {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+.footer span {
+  padding-top: 0;
+  padding-bottom: 10px;
+}
+.footer p {
+  padding-bottom: 0;
+}
+.footer h3 {
+  padding-bottom: 16px;
+}
+.footer h4 {
+  padding-top: 19px;
+  padding-bottom: 0;
+}
+@media (min-width: 768px) {
+  .footer__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+  }
+}
+
+.bandsite__down {
+  padding-top: 60px;
+}
+@media (min-width: 768px) {
+  .bandsite__down {
+    display: none;
+  }
+}
+.bandsite__up {
+  display: none;
+}
+@media (min-width: 768px) {
+  .bandsite__up {
+    display: flex;
+  }
 }/*# sourceMappingURL=bio.css.map */
