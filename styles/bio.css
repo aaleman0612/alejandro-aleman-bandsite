@@ -216,11 +216,16 @@ body ul {
 
 .gallery {
   margin: 0%;
+  background-color: #fafafa;
 }
 .gallery__name {
   margin: 0%;
+  padding-top: 2rem;
+  padding-left: 8px;
 }
 .gallery__name--images {
+  display: flex;
+  flex-direction: column;
   width: 100%;
 }
 @media (min-width: 768px) {
@@ -230,6 +235,9 @@ body ul {
     flex-wrap: wrap;
     justify-content: space-between;
   }
+}
+.gallery__name--images img {
+  padding: 0.5rem;
 }
 @media (min-width: 768px) {
   .gallery__name--images img {
