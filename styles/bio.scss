@@ -285,6 +285,11 @@ footer {
         display: flex;
         flex-direction: row;
         align-items: center;
+
+        & img {
+          display: flex;
+          padding-right: 10px;
+        }
       }
     }
   }
@@ -298,12 +303,12 @@ footer {
     padding-bottom: 0;
   }
 
-  &__h3 {
+  & h3 {
     padding-bottom: 0;
     margin: 0;
   }
 
-  &__h4 {
+  & h4 {
     padding: 0;
     margin: 0;
   }
