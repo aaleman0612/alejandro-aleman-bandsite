@@ -1,44 +1,78 @@
 body {
   font-family: avenir;
 }
-
-.navbar {
-  color: #ffffff;
-  background-color: #323232;
+body a {
   text-decoration: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  color: inherit;
 }
-.navbar__logo {
-  height: 24px;
-  font-size: 1.5em;
+body ul {
+  list-style-type: none;
 }
-.navbar__items {
-  width: 100%;
-}
-.navbar__items ul {
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-}
-.navbar__items ul li__active {
-  padding-bottom: 0.8rem;
-  border-bottom: 4px white solid;
-  width: 50%;
-  text-align: center;
+
+.nav-bar {
+  background-color: #323232;
+  margin: 0;
+  color: white;
 }
 @media (min-width: 768px) {
-  .navbar__items ul li__active {
-    padding-bottom: 34px;
-    border-bottom: 4px white solid;
+  .nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
   }
 }
-.navbar__items ul li a {
-  text-decoration: none;
-  color: #ffffff;
-  font-size: small;
+@media (min-width: 768px) {
+  .nav-bar__outer {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+  }
+}
+.nav-bar__inner {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 0.8rem;
+}
+@media (min-width: 768px) {
+  .nav-bar__inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+.nav-bar__logo {
+  margin: 0;
+  padding: 0;
   text-align: center;
+}
+.nav-bar__items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  padding-top: 0.4rem;
+  width: 100%;
+}
+.nav-bar__items--bio {
+  padding: 0;
+  color: #ffffff;
+  width: 50%;
+  border-bottom: 0.2rem solid white;
+  padding-bottom: 0.6rem;
+}
+.nav-bar__items--shows {
+  width: 50%;
+  color: #e1e1e1;
+}
+@media (min-width: 768px) {
+  .nav-bar {
+    width: 60%;
+    padding-left: 2rem;
+  }
 }
 
 .image-container {
@@ -57,10 +91,117 @@ body {
   transform: translate(-50%, -50%);
 }
 .image-container__text {
-  display: none;
-  font-size: 80px;
+  font-size: 25px;
   color: #fff;
   padding: 10px;
+}
+
+.about {
+  color: #323232;
+  display: flex;
+  flex-direction: column;
+}
+.about__band {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (min-width: 1280px) {
+  .about__band {
+    align-items: flex-start;
+    width: 60%;
+  }
+}
+.about__section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.about__section--quote {
+  margin-top: 0.8rem;
+  width: 85%;
+  font-weight: bold;
+}
+@media (min-width: 768px) {
+  .about__section--quote {
+    width: 70%;
+    margin-top: 2rem;
+    text-align: start;
+  }
+}
+.about__section--writer {
+  width: 88%;
+  margin-top: 0;
+  font-weight: bold;
+}
+@media (min-width: 768px) {
+  .about__section--writer {
+    font-weight: 600;
+    width: 76%;
+    font-size: 0.976rem;
+  }
+}
+@media (min-width: 1280px) {
+  .about__section--writer {
+    font-size: 1rem;
+    width: 66%;
+  }
+}
+.about img {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .about img {
+    width: 84%;
+  }
+}
+@media (min-width: 1280px) {
+  .about img {
+    margin-top: 0.8rem;
+  }
+}
+.about__ps {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1rem;
+  width: 95%;
+}
+@media (min-width: 768px) {
+  .about__ps {
+    width: 70%;
+  }
+}
+@media (min-width: 1280px) {
+  .about__ps {
+    align-items: center;
+    width: 60%;
+  }
+}
+.about__ps--info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .about__ps--info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+  }
+}
+@media (min-width: 768px) {
+  .about__ps--info p {
+    width: 45%;
+    font-size: 14px;
+  }
+}
+@media (min-width: 1280px) {
+  .about__ps--info p {
+    width: 45%;
+    margin-right: 0;
+  }
 }
 
 .footer {
@@ -78,6 +219,9 @@ body {
 }
 .gallery__name {
   margin: 0%;
+}
+.gallery__name--images {
+  width: 100%;
 }
 @media (min-width: 768px) {
   .gallery__name--images {
