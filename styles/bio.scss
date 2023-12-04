@@ -27,12 +27,13 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    padding-top: 2rem;
   }
   &__outer {
     @include tablet {
       display: flex;
       flex-direction: row;
-      width: 90%;
+      width: 100%;
     }
   }
   &__inner {
@@ -80,7 +81,7 @@ body {
   }
 
   @include tablet {
-    width: 60%;
+    width: 100%;
     padding-left: 2rem;
   }
 }
