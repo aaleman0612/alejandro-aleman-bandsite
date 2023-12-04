@@ -241,6 +241,7 @@ body {
       @include tablet {
         margin: 0%;
         display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
       }
