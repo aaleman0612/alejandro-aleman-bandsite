@@ -6,6 +6,8 @@ body {
 body a {
   text-decoration: none;
   color: inherit;
+  text-align: center;
+  padding-top: 1rem;
 }
 body ul {
   list-style-type: none;
@@ -57,19 +59,18 @@ body ul {
   margin: 0;
   padding: 0;
   text-align: center;
-  padding-top: 0.4rem;
   width: 100%;
 }
 .nav-bar__items--bio {
   padding: 0;
   color: #ffffff;
   width: 50%;
-  border-bottom: 0.2rem solid white;
   padding-bottom: 0.6rem;
 }
 .nav-bar__items--shows {
   width: 50%;
-  color: #e1e1e1;
+  color: #ffffff;
+  border-bottom: 0.2rem solid white;
 }
 @media (min-width: 768px) {
   .nav-bar {
@@ -95,7 +96,7 @@ body ul {
   transform: translate(-50%, -50%);
 }
 .image-container__text {
-  font-size: 25px;
+  font-size: 20px;
   color: #fff;
-  padding: 10px;
+  padding: 1rem;
 }/*# sourceMappingURL=shows.css.map */

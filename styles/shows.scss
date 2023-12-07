@@ -12,6 +12,8 @@ body {
   & a {
     text-decoration: none;
     color: inherit;
+    text-align: center;
+    padding-top: 1rem;
   }
   & ul {
     list-style-type: none;
@@ -62,20 +64,19 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    padding-top: 0.4rem;
     width: 100%;
 
     &--bio {
       padding: 0;
       color: $primary-color;
       width: 50%;
-      border-bottom: 0.2rem solid white;
       padding-bottom: 0.6rem;
     }
 
     &--shows {
       width: 50%;
-      color: #e1e1e1;
+      color: $primary-color;
+      border-bottom: 0.2rem solid white;
     }
   }
 
@@ -104,8 +105,8 @@ body {
   }
 
   &__text {
-    font-size: 25px;
+    font-size: 20px;
     color: #fff;
-    padding: 10px;
+    padding: 1rem;
   }
 }
