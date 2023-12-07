@@ -1,0 +1,52 @@
+@use "./partials/mixins" as *;
+@use "./partials/typography" as *;
+
+$primary-color: #ffffff;
+$secondary-color: #323232;
+
+body {
+  font-family: avenir;
+  margin: 0;
+  padding: 0;
+
+  & a {
+    text-decoration: none;
+    color: inherit;
+  }
+  & ul {
+    list-style-type: none;
+  }
+}
+
+.nav-bar {
+  background-color: $secondary-color;
+  margin: 0;
+  color: white;
+
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 2rem;
+  }
+  &__outer {
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+    }
+  }
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 0.8rem;
+
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
+}
