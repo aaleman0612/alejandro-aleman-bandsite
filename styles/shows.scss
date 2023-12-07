@@ -99,14 +99,22 @@ body {
 
   &__centered-text {
     position: absolute;
-    top: 50%;
+    top: 33%;
     left: 30%;
     transform: translate(-50%, -50%);
   }
 
   &__text {
-    font-size: 20px;
+    font-size: 18px;
     color: #fff;
-    padding: 1rem;
+    padding-left: 1.5rem;
+  }
+  &__texts {
+    color: #fff;
+    padding-left: 1.5rem;
+  }
+  &__song {
+    display: flex;
+    align-items: center;
   }
 }
