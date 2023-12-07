@@ -45,3 +45,35 @@ body ul {
     align-items: flex-start;
   }
 }
+.nav-bar__logo {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.nav-bar__items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  padding-top: 0.4rem;
+  width: 100%;
+}
+.nav-bar__items--bio {
+  padding: 0;
+  color: #ffffff;
+  width: 50%;
+  border-bottom: 0.2rem solid white;
+  padding-bottom: 0.6rem;
+}
+.nav-bar__items--shows {
+  width: 50%;
+  color: #e1e1e1;
+}
+@media (min-width: 768px) {
+  .nav-bar {
+    width: 100%;
+    padding-left: 2rem;
+  }
+}/*# sourceMappingURL=shows.css.map */

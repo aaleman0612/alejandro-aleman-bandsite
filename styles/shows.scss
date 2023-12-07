@@ -49,4 +49,38 @@ body {
       align-items: flex-start;
     }
   }
+  &__logo {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    padding-top: 0.4rem;
+    width: 100%;
+
+    &--bio {
+      padding: 0;
+      color: $primary-color;
+      width: 50%;
+      border-bottom: 0.2rem solid white;
+      padding-bottom: 0.6rem;
+    }
+
+    &--shows {
+      width: 50%;
+      color: #e1e1e1;
+    }
+  }
+
+  @include tablet {
+    width: 100%;
+    padding-left: 2rem;
+  }
 }
