@@ -106,7 +106,7 @@ body {
 
   &__text {
     font-size: 25px;
-    color: #fff;
+    color: $primary-color;
     padding: 10px;
   }
 }
@@ -115,6 +115,7 @@ body {
   color: $secondary-color;
   display: flex;
   flex-direction: column;
+  color: $secondary-color;
 
   &__band {
     display: flex;
@@ -229,6 +230,7 @@ body {
 .gallery {
   margin: 0%;
   background-color: #fafafa;
+  color: $secondary-color;
 
   &__name {
     margin: 0%;
