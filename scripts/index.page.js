@@ -38,7 +38,8 @@ const commentInfo = [
 
 commentInfo.forEach((comment) => displayComment(comment))
 
-const form = document.querySelector(".form");
+const form = document.querySelector("form");
+
 function formSubmitHandler(event) {
     event.preventDefault()
 
@@ -57,3 +58,4 @@ function formSubmitHandler(event) {
 }
 
 form.addEventListener('submit', formSubmitHandler);
+
