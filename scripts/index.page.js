@@ -30,12 +30,29 @@ function createComment(name, date, commentText, commentArray) {
     commentArray.push
 }
 
-// to do: change dates to datetime format
 const commentInfo = {
-
+    (name: "Connor Walton", date: "02/17/2021", comment: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.")
+    
 }
 
-for(let i = 0; i < 3; i++) {
-    // add logic to sort by time first
-    // commentInfo.sort()
+commentInfo.forEach((comment) => displayComment(comment))
+
+const form = document.querySelector(".form");
+function formSubmitHandler(event) {
+    event.preventDefault()
+
+    const date = new Date(Date,now())
+    const currentDate = date.getDate() + "/" + date.getMonth() + "/" + date.getFullYear()
+
+    createComment(event.target.name.value, Date.now(), event.target.comment.value,
+    commentInfo)
+
+    const commentsContainer = document.querySelector(".comments__container");
+    commentsContainer.innerHTML = '';
+
+    commentInfo.forEach((comment) => displayComment(comment))
+
+    event.target.reset();
 }
+
+form.addEventListener('submit', formSubmitHandler);

@@ -107,4 +107,5 @@ body ul {
 .image-container__song {
   display: flex;
   align-items: center;
+  z-index: 1;
 }/*# sourceMappingURL=shows.css.map */

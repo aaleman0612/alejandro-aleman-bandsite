@@ -15,3 +15,21 @@
     src: url(../../assets/fonts/AvenirNextLTPro-Demi.otf) format ("opentype");
   }
 }
+
+@mixin typography($weight, $size, $height) {
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+}
+
+@mixin mobile-header {
+  @include typography(600, 1.5rem, 2rem);
+}
+
+@mixin mobile-subheader {
+  @include typography(600, 0.875rem, 1.275rem);
+}
+
+@mixin mobile-label {
+  @include typography(600, 0.625rem, 1.25rem)
+}
