@@ -332,11 +332,11 @@ button {
   padding: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 .footer_div h1 {
   padding: 0;
   padding-top: 22px;
+  font-size: 1.5rem;
 }
 @media (min-width: 768px) {
   .footer_div h1 {
@@ -368,24 +368,39 @@ button {
   display: flex;
   padding-right: 11rem;
 }
+.footer__container img {
+  height: 1.5rem;
+  width: 1.5rem;
+  display: flex;
+  padding-right: 2rem;
+  padding-bottom: 2rem;
+}
 
 span {
   padding-top: 0;
-  padding-bottom: 10px;
+  padding-bottom: 0;
 }
 
 p {
-  padding-bottom: 0;
+  margin: 0;
+  padding: 0;
 }
 
 h3 {
-  padding-bottom: 0;
   margin: 0;
+  font-size: 1rem;
 }
 
 h4 {
   padding: 0;
   margin: 0;
+  font-size: 1rem;
+  padding-bottom: 1rem;
+}
+
+article {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .bandsite__down {

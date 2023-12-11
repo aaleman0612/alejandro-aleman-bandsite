@@ -74,29 +74,3 @@ const commentsList = document.getElementById('comments')
 commentValues.forEach(function (obj) {
     createCommentElement(obj)
 })
-
-
-
-// commentInfo.forEach((comment) => displayComment(comment))
-
-// const form = document.querySelector("form");
-
-// function formSubmitHandler(event) {
-//     event.preventDefault()
-
-//     const date = new Date(Date,now())
-//     const currentDate = date.getDate() + "/" + date.getMonth() + "/" + date.getFullYear()
-
-//     createComment(event.target.name.value, Date.now(), event.target.comment.value,
-//     commentInfo)
-
-//     const commentsContainer = document.querySelector(".comments__container");
-//     commentsContainer.innerHTML = '';
-
-//     commentInfo.forEach((comment) => displayComment(comment))
-
-//     event.target.reset();
-// }
-
-// form.addEventListener('submit', formSubmitHandler);
-

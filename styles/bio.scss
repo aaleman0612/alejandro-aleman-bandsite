@@ -351,11 +351,11 @@ button {
   padding: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
 
   & h1 {
     padding: 0;
     padding-top: 22px;
+    font-size: 1.5rem;
 
     @include tablet {
       padding-top: 16px;
@@ -375,38 +375,56 @@ button {
         padding-right: 10px;
         height: 2rem;
         width: 2rem;
-        }
       }
     }
   }
+}
 
-  .footer__logo {
-    width: 50%;
-  }
+.footer__logo {
+  width: 50%;
+}
 
-  .footer__container {
+.footer__container {
+  display: flex;
+  padding-right: 11rem;
+
+  & img {
+    height: 1.5rem;
+    width: 1.5rem;
     display: flex;
-    padding-right: 11rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
   }
+}
 
-  span {
-    padding-top: 0;
-    padding-bottom: 10px;
-  }
+span {
+  padding-top: 0;
+  padding-bottom: 0;
+}
 
-  p {
-    padding-bottom: 0;
-  }
+p {
+  margin: 0;
+  padding: 0;
+}
 
-  h3 {
-    padding-bottom: 0;
-    margin: 0;
-  }
+h3 {
+  margin: 0;
+  font-size: 1rem;
+}
 
-  h4 {
-    padding: 0;
-    margin: 0;
-  }
+h4 {
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  padding-bottom: 1rem;
+}
+
+article {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+
 
 .bandsite {
   &__down {
