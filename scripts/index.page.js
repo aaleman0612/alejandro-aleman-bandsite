@@ -22,8 +22,9 @@ function createCommentElement(obj) {
     document.getElementById('comments').appendChild(newComment)
 }
 
-document
-    .getElementsId('comment-form')
+const test = document
+    .getElementById('comment-form')
+    
     .addEventListener('submit', function (event) {
     event.preventDefault()
 

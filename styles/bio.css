@@ -86,6 +86,7 @@ body ul {
 .image-container__image {
   width: 100%;
   height: auto;
+  background-color: #323232;
   opacity: 50%;
 }
 .image-container__centered-text {
@@ -274,8 +275,9 @@ body ul {
 }
 
 .form__img {
-  display: block;
-  width: 10px;
+  display: flex;
+  width: 2rem;
+  border-radius: 10px;
 }
 .form__label {
   font-weight: 600;
@@ -305,11 +307,44 @@ body ul {
   border: none;
 }
 
-.comment-form img {
-  display: flex;
+#comment-form img {
   width: 2rem;
   height: 2rem;
-  border-radius: 2rem;
+  border-radius: 40px;
+}
+
+#comment-text {
+  background-color: #FAFAFA;
+  border-color: #e1e1e1;
+  border-radius: 4px;
+  border-width: 1px;
+  width: 80%;
+  display: flex;
+  justify-content: end;
+}
+
+#comment-name {
+  background-color: #FAFAFA;
+  border-color: #e1e1e1;
+  border-radius: 4px;
+  border-width: 1px;
+  width: 80%;
+}
+
+#comment-text::-moz-placeholder {
+  color: #323232;
+}
+
+#comment-text::placeholder {
+  color: #323232;
+}
+
+#comment-name::-moz-placeholder {
+  color: #323232;
+}
+
+#comment-name::placeholder {
+  color: #323232;
 }
 
 button {
@@ -325,11 +360,14 @@ button {
   justify-content: center;
 }
 
+button:hover {
+  background-color: #000000;
+}
+
 .footer_div {
   background-color: #323232;
   color: #ffffff;
-  margin: 0;
-  padding: 0;
+  padding-left: 0.5rem;
   display: flex;
   flex-direction: column;
 }
@@ -360,10 +398,6 @@ button {
   }
 }
 
-.footer__logo {
-  width: 50%;
-}
-
 .footer__container {
   display: flex;
   padding-right: 11rem;
@@ -373,7 +407,7 @@ button {
   width: 1.5rem;
   display: flex;
   padding-right: 2rem;
-  padding-bottom: 2rem;
+  padding-bottom: 1.4rem;
 }
 
 span {

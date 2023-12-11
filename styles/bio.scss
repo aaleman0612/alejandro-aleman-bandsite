@@ -5,6 +5,7 @@ $primary-color: #ffffff;
 $secondary-color: #323232;
 $mercury: #e1e1e1;
 $silver: #afafaf;
+$alabaster: #FAFAFA;
 
 body {
   font-family: avenir;
@@ -96,6 +97,7 @@ body {
   &__image {
     width: 100%;
     height: auto;
+    background-color: $secondary-color;
     opacity: 50%;
   }
 
@@ -287,8 +289,9 @@ body {
 
 .form {
   &__img {
-    display: block;
-    width: 10px;
+    display: flex;
+    width: 2rem;
+    border-radius: 10px;
   }
 
   &__label {
@@ -319,17 +322,39 @@ body {
   }
 }
 
-.comment-form img {
-  display: flex;
-  width: 2rem;
-  height: 2rem;
-  border-radius: 2rem;
+#comment-form {
+  & img {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 40px;
+  }
 }
 
-// .comment-form {
-//   // display: flex;
-//   // justify-content: space-between;
-// }
+#comment-text {
+  background-color: $alabaster;
+  border-color: $mercury;
+  border-radius: 4px;
+  border-width: 1px;
+  width: 80%;
+  display: flex;
+  justify-content: end;
+}
+
+#comment-name {
+  background-color: $alabaster;
+  border-color: $mercury;
+  border-radius: 4px;
+  border-width: 1px;
+  width: 80%;
+}
+
+#comment-text::placeholder {
+  color: $secondary-color;
+}
+
+#comment-name::placeholder {
+  color: $secondary-color;
+}
 
 button {
   background-color: $secondary-color;
@@ -344,11 +369,14 @@ button {
   justify-content: center;
 }
 
+button:hover {
+  background-color: #000000;
+}
+
 .footer_div {
   background-color: $secondary-color;
   color: $primary-color;
-  margin: 0;
-  padding: 0;
+  padding-left: 0.5rem;
   display: flex;
   flex-direction: column;
 
@@ -380,10 +408,6 @@ button {
   }
 }
 
-.footer__logo {
-  width: 50%;
-}
-
 .footer__container {
   display: flex;
   padding-right: 11rem;
@@ -393,7 +417,7 @@ button {
     width: 1.5rem;
     display: flex;
     padding-right: 2rem;
-    padding-bottom: 2rem;
+    padding-bottom: 1.4rem;
   }
 }
 
