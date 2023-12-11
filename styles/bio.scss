@@ -342,7 +342,6 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
 .footer_div {
@@ -376,42 +375,38 @@ button {
         padding-right: 10px;
         height: 2rem;
         width: 2rem;
-
-        &__logo {
-          color: red;
         }
       }
     }
   }
 
-  & span {
+  .footer__logo {
+    width: 50%;
+  }
+
+  .footer__container {
+    display: flex;
+    padding-right: 11rem;
+  }
+
+  span {
     padding-top: 0;
     padding-bottom: 10px;
   }
 
-  & p {
+  p {
     padding-bottom: 0;
   }
 
-  & h3 {
+  h3 {
     padding-bottom: 0;
     margin: 0;
   }
 
-  & h4 {
+  h4 {
     padding: 0;
     margin: 0;
   }
-
-  &__list {
-    @include tablet {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      width: 90%;
-    }
-  }
-}
 
 .bandsite {
   &__down {

@@ -358,32 +358,34 @@ button {
     height: 2rem;
     width: 2rem;
   }
-  .footer_div__container--img__logo {
-    color: red;
-  }
 }
-.footer_div span {
+
+.footer__logo {
+  width: 50%;
+}
+
+.footer__container {
+  display: flex;
+  padding-right: 11rem;
+}
+
+span {
   padding-top: 0;
   padding-bottom: 10px;
 }
-.footer_div p {
+
+p {
   padding-bottom: 0;
 }
-.footer_div h3 {
+
+h3 {
   padding-bottom: 0;
   margin: 0;
 }
-.footer_div h4 {
+
+h4 {
   padding: 0;
   margin: 0;
-}
-@media (min-width: 768px) {
-  .footer_div__list {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 90%;
-  }
 }
 
 .bandsite__down {
