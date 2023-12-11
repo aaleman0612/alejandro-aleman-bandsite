@@ -243,10 +243,14 @@ body {
 
       img {
         padding: 0.5rem;
+        filter: grayscale(100%);
         @include tablet {
           width: calc(33.33% - 10px);
           margin-bottom: 10px;
         }
+      }
+      img:hover {
+        filter: grayscale(0%);
       }
     }
   }
@@ -255,6 +259,7 @@ body {
 .comment {
   color: $secondary-color;
   border-bottom: 2px solid $mercury;
+  border-top: 2px solid $mercury;
   padding-top: 1rem;
   padding-bottom: 0.75rem;
   display: flex;
@@ -323,10 +328,13 @@ body {
 }
 
 #comment-form {
+  display: flex;
+  flex-wrap: wrap;
   & img {
     width: 2rem;
     height: 2rem;
     border-radius: 40px;
+    margin-left: 10px;
   }
 }
 
@@ -336,8 +344,27 @@ body {
   border-radius: 4px;
   border-width: 1px;
   width: 80%;
-  display: flex;
-  justify-content: end;
+  height: 8rem;
+  margin-left: 3rem;
+  margin-bottom: 1rem;
+  padding-left: 0.6rem;
+  text-align: start;
+  margin-right: 10px;
+}
+
+.comment-p {
+  color: $mercury;
+  margin-left: 3rem;
+  margin-top: 1rem;
+  font-size: 12px;
+  margin-bottom: 0.4rem;
+}
+
+.comment-pname {
+  color: $mercury;
+  margin-left: 1rem;
+  font-size: 12px;
+  margin-bottom: 0;
 }
 
 #comment-name {
@@ -346,6 +373,8 @@ body {
   border-radius: 4px;
   border-width: 1px;
   width: 80%;
+  margin-left: 3rem;
+  
 }
 
 #comment-text::placeholder {
@@ -361,16 +390,22 @@ button {
   color: $primary-color;
   border: none;
   border-radius: 4px;
-  width: 80%;
-  height: 2rem;
+  width: 82%;
+  height: 3rem;
   font-size: large;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: 3rem;
 }
 
 button:hover {
   background-color: #000000;
+}
+
+.comment {
+  display: flex;
+  flex-direction: column;
 }
 
 .footer_div {
@@ -408,6 +443,16 @@ button:hover {
   }
 }
 
+.comment-name {
+  color: $mercury;
+  margin-left: 12rem;
+}
+
+.comment {
+  display: flex;
+
+}
+
 .footer__container {
   display: flex;
   padding-right: 11rem;
@@ -429,6 +474,7 @@ span {
 p {
   margin: 0;
   padding: 0;
+  padding-right: 1rem;
 }
 
 h3 {
