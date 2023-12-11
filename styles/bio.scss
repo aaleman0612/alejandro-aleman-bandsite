@@ -138,7 +138,6 @@ body {
       margin-top: 0.8rem;
       width: 85%;
       font-weight: bold;
-      color: red;
 
       @include tablet {
         width: 70%;
@@ -322,9 +321,28 @@ body {
 
 .comment-form img {
   display: flex;
-  max-width: 2rem;
+  width: 2rem;
   height: 2rem;
   border-radius: 2rem;
+}
+
+// .comment-form {
+//   // display: flex;
+//   // justify-content: space-between;
+// }
+
+button {
+  background-color: $secondary-color;
+  color: $primary-color;
+  border: none;
+  border-radius: 4px;
+  width: 80%;
+  height: 2rem;
+  font-size: large;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
 
 .footer_div {
@@ -347,20 +365,23 @@ body {
 
   &__container {
     display: flex;
-    background-color: red;
 
-    // @include tablet {
-    //   display: flex;
-    //   flex-direction: row;
-    //   align-items: center;
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
 
-    //   &__img {
-    //     display: flex;
-    //     padding-right: 10px;
-    //     height: 2rem;
-    //     width: 2rem;
-    //   }
-    // }
+      &--img {
+        display: flex;
+        padding-right: 10px;
+        height: 2rem;
+        width: 2rem;
+
+        &__logo {
+          color: red;
+        }
+      }
+    }
   }
 
   & span {
