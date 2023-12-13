@@ -1,0 +1,159 @@
+.comment {
+  color: $black;
+  border-bottom: 2px solid $mercury;
+  border-top: 2px solid $mercury;
+  padding-top: 1rem;
+  padding-bottom: 0.75rem;
+  display: flex;
+  justify-content: start;
+
+  &__img {
+    background-color: $mercury;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  &__container {
+    flex-grow: 1;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0.5rem;
+  }
+
+  &__name {
+    font-weight: 600;
+  }
+
+  &__date {
+    color: $silver;
+  }
+}
+
+.form {
+  &__img {
+    display: flex;
+    width: 2rem;
+    border-radius: 10px;
+  }
+
+  &__label {
+    @include mobile-label;
+    text-transform: uppercase;
+    color: $silver;
+  }
+
+  &__input {
+    box-sizing: border-box;
+    padding: 0.75rem;
+    border-radius: 4px;
+  }
+
+  &__textarea {
+    box-sizing: border-box;
+    padding: 0.75rem;
+    border-radius: 4px;
+    resize: none;
+  }
+
+  &__button {
+    @include mobile-subheader;
+    text-transform: uppercase;
+    background-color: $black;
+    color: $white;
+    border: none;
+  }
+}
+
+#comment-form {
+  display: flex;
+  flex-wrap: wrap;
+  & img {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 40px;
+    margin-left: 10px;
+  }
+}
+
+#comment-text {
+  background-color: $alabaster;
+  border-color: $mercury;
+  border-radius: 4px;
+  border-width: 1px;
+  width: 80%;
+  height: 8rem;
+  margin-left: 3rem;
+  margin-bottom: 1rem;
+  padding-left: 0.6rem;
+  text-align: start;
+  margin-right: 10px;
+}
+
+.comment-p {
+  color: $mercury;
+  margin-left: 3rem;
+  margin-top: 1rem;
+  font-size: 12px;
+  margin-bottom: 0.4rem;
+}
+
+.comment-pname {
+  color: $mercury;
+  margin-left: 1rem;
+  font-size: 12px;
+  margin-bottom: 0;
+}
+
+#comment-name {
+  background-color: $alabaster;
+  border-color: $mercury;
+  border-radius: 4px;
+  border-width: 1px;
+  width: 80%;
+  margin-left: 3rem;
+}
+
+#comment-text::placeholder {
+  color: $black;
+}
+
+#comment-name::placeholder {
+  color: $secondary-color;
+}
+
+button {
+  background-color: $secondary-color;
+  color: $primary-color;
+  border: none;
+  border-radius: 4px;
+  width: 82%;
+  height: 3rem;
+  font-size: large;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 3rem;
+}
+
+button:hover {
+  background-color: #000000;
+}
+
+.comment {
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-name {
+  color: $mercury;
+  margin-left: 12rem;
+}
+
+.comment {
+  display: flex;
+}

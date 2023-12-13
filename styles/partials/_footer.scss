@@ -1,0 +1,47 @@
+.footer_div {
+  background-color: $secondary-color;
+  color: $primary-color;
+  padding-left: 0.5rem;
+  display: flex;
+  flex-direction: column;
+
+  & h1 {
+    padding: 0;
+    padding-top: 22px;
+    font-size: 1.5rem;
+
+    @include tablet {
+      padding-top: 16px;
+    }
+  }
+
+  &__container {
+    display: flex;
+
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      &--img {
+        display: flex;
+        padding-right: 10px;
+        height: 2rem;
+        width: 2rem;
+      }
+    }
+  }
+}
+
+.footer__container {
+  display: flex;
+  padding-right: 11rem;
+
+  & img {
+    height: 1.5rem;
+    width: 1.5rem;
+    display: flex;
+    padding-right: 2rem;
+    padding-bottom: 1.4rem;
+  }
+}
