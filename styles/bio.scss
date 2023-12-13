@@ -24,7 +24,7 @@ body {
 }
 
 .nav-bar {
-  background-color: $secondary-color;
+  background-color: $black;
   margin: 0;
   color: white;
 
@@ -72,7 +72,7 @@ body {
 
     &--bio {
       padding: 0;
-      color: $primary-color;
+      color: $white;
       width: 50%;
       border-bottom: 0.2rem solid white;
     }
@@ -97,7 +97,7 @@ body {
   &__image {
     width: 100%;
     height: auto;
-    background-color: $secondary-color;
+    background-color: $black;
     opacity: 50%;
   }
 
@@ -110,16 +110,16 @@ body {
 
   &__text {
     font-size: 25px;
-    color: $primary-color;
+    color: $white;
     padding: 10px;
   }
 }
 
 .about {
-  color: $secondary-color;
+  color: $black;
   display: flex;
   flex-direction: column;
-  color: $secondary-color;
+  color: $black;
 
   &__band {
     display: flex;
@@ -221,8 +221,8 @@ body {
 
 .gallery {
   margin: 0%;
-  background-color: #fafafa;
-  color: $secondary-color;
+  background-color: $alabaster;
+  color: $black;
 
   &__name {
     margin: 0%;
@@ -257,7 +257,7 @@ body {
 }
 
 .comment {
-  color: $secondary-color;
+  color: $black;
   border-bottom: 2px solid $mercury;
   border-top: 2px solid $mercury;
   padding-top: 1rem;
@@ -321,8 +321,8 @@ body {
   &__button {
     @include mobile-subheader;
     text-transform: uppercase;
-    background-color: $secondary-color;
-    color: $primary-color;
+    background-color: $black;
+    color: $white;
     border: none;
   }
 }
@@ -378,7 +378,7 @@ body {
 }
 
 #comment-text::placeholder {
-  color: $secondary-color;
+  color: $black;
 }
 
 #comment-name::placeholder {
