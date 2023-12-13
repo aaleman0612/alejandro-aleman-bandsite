@@ -1,4 +1,9 @@
-/*MOBILE*/
+$black: #323232;
+$white: #FFFFFF;
+$silver: #AFAFAF;
+$mercury: #E1E1E1;
+$alabaster: #FAFAFA;
+
 .header__nav {
     font-family: 'avenir-regular';
     width: 100%;
@@ -47,7 +52,6 @@
     }
 }
 
-/*TABLET*/
 @include tablet {
     .header__nav {
         flex-direction: row;
@@ -85,7 +89,6 @@
     }
 }
 
-/*DESKTOP*/
 @include desktop {
     .header__nav {
         &-logo-container {
