@@ -1,3 +1,6 @@
+@use "./partials/mixins" as mixins;
+@use "./partials/typography" as *;
+
 * {
   margin: 0;
   padding: 0;
@@ -9,13 +12,3 @@ body {
   margin: 0;
   padding: 0;
 }
-
-@import "./partials/about";
-@import "./partials/navbar";
-@import "./partials/footer";
-@import "./partials/typography";
-@import "./partials/mixins";
-@import "./partials/colors";
-@import "./partials/photogallery";
-@import "./partials/sizing";
-@import './partials/comments';

@@ -1,3 +1,6 @@
+@use "../mixins" as *;
+@use "./partials/typography" as *;
+
 .comment {
   color: $black;
   border-bottom: 2px solid $mercury;
