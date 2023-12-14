@@ -4,108 +4,113 @@ $silver: #afafaf;
 $mercury: #e1e1e1;
 $alabaster: #fafafa;
 
-
 .about {
-  padding: 0rem 1rem 2.5rem 1rem;
-  color: black;
-  background-color: $white;
+    padding: 0rem 1rem 2.5rem 1rem;
+    color: black;
+    font-size: 1.5rem;
+    background-color: $white;
 
-  &__intro {
+    &__introduction {
     display: flex;
     flex-direction: column;
     align-items: left;
     &-title {
-      @include mobile-header;
-      padding-top: 2rem;
+        @include mobile-header;
+        padding-top: 2rem;
     }
     &-image {
-      height: 45.313vw;
-      width: 100%;
-      margin: 1.5rem 0;
-      object-fit: cover;
+        height: 45.313vw;
+        width: 100%;
+        margin: 1.5rem 0;
+        object-fit: cover;
     }
-    &-quote {
-      font-family: "avenir-bold";
-      font-size: 0.875rem;
-      line-height: 1.375rem;
-      padding-bottom: 2rem;
-      width: 85%;
-      &-person {
-        padding-bottom: 2.5rem;
-        @include mobile-sub;
-      }
-    }
-  }
-
-  &__bio-names {
-    font-family: "avenir-bold";
-    font-size: 0.875rem;
-    line-height: 1.375rem;
-  }
-  &__bio-main {
-    @include mobile-para;
-    padding-top: 1.5rem;
-  }
 }
 
+    &__section {
+    &-quote {
+    font-family: "avenir-bold";
+    font-size: 0.85rem;
+    line-height: 1.375rem;
+    padding-bottom: 0.5rem;
+    width: 85%;
+    }
+    &-writer {
+        padding-bottom: 2rem;
+        @include mobile-sub;
+    }
+}
+
+    &__bio-name {
+    font-family: "avenir-bold";
+    font-size: 0.875rem;
+    font-weight: 100;
+    line-height: 1.375rem;
+}
+    &__bio-main {
+    @include mobile-para;
+    padding-top: 1rem;
+    }
+}
+
+
 @include tablet {
-  .about {
+    .about {
     padding: 0rem 1.5rem 1.5rem 1.5rem;
 
     &__intro {
-      &-title {
+        &-title {
         @include h1-header;
-      }
-      &-image {
+    }
+        &-image {
         height: 47.136vw;
-      }
-      &-quote {
+    }
+        &-quote {
         @include h2-header;
         width: unset;
-        &-person {
-          font-size: 1rem;
-          line-height: 1.5rem;
+        &-writer {
+            font-size: 1rem;
+            line-height: 1.5rem;
         }
-      }
     }
-    &__bio-names {
-      @include h2-header;
+    }
+    &__bio-name {
+        @include h2-header;
     }
     &__bio-container-main {
-      display: flex;
-      justify-content: space-evenly;
+        display: flex;
+        justify-content: space-evenly;
     }
 
     &__bio-main {
-      @include h4-para;
+        @include h4-para;
     }
-  }
+}
 }
 
 @include desktop {
-  .about {
+    .about {
     padding: 0 17rem 3rem 17rem;
     &__intro {
-      &-title {
+        &-title {
         margin: 3rem 0 0 -5.75rem;
-      }
-      &-image {
+        }
+        &-image {
         margin: 3rem 0;
         height: 31.25vw;
-      }
-      &-quote {
-        padding-bottom: 2.5rem;
-        &-person {
-          padding-bottom: 3.5rem;
         }
-      }
+        &-quote {
+        padding-bottom: 2.5rem;
+        &-writer {
+            padding-bottom: 3.5rem;
+        }
+        }
     }
     &__bio-container-main {
-      width: 55rem;
+        width: 55rem;
     }
     &__bio-main {
-      width: 26.25rem;
-      padding-top: 2rem;
+        width: 26.25rem;
+        padding-top: 2rem;
     }
-  }
+}
 }

@@ -25,7 +25,6 @@
     <main>
     <header class="header">
         <div class="image-container">
-            <img src="./assets/Images/Images/hero-bio.jpg" alt="Image with Text" class="image-container__image">
             <div class="image-container__centered-text">
             <p class="image-container__text">The Bees Knees</p>
             </div>
@@ -34,11 +33,13 @@
     </header>
     <article class="about">
         <section class="about__introduction">
-            <h1 class="about__introduction-title">About the Musicians</h2>
+            <h1 class="about__introduction-title">About the Musicians</h1>
             <img class="about__introduction-image" src="./assets/Images/Images/band.jpg" alt="Photo of Band">
-                <h2 class="about__section--quote">“We push each other to be the best. It’s not uncommon for 
+            <div class="about__section">
+                <h2 class="about__section-quote">“We push each other to be the best. It’s not uncommon for 
                     one of us to say ‘this needs to be better, back to the drawing board’”</h2>
-                <h2 class="about__section--writer">- Bryan Teddy, lead vocalist of The Bees Knees</h2>
+                <h2 class="about__section-writer">- Bryan Teddy, lead vocalist of The Bees Knees</h2>
+            </div>
         </section>
             <section class="about__bio">
                 <h2 class="about__bio-name">The Bees Knees</h4>
@@ -78,17 +79,17 @@
 
     <section class="comments">
         <h1 class="comments__title">Join the Conversation</h1>
-        <form id="comment-form">
-            <div class="comments__in">
+        <div class="comments__img">
             <img src="./assets/Images/Images/Mohan-muruge.jpg" alt="mohan photo"></div>
-            <p class="comment-pname">NAME</p>
+        <form id="comments-form">
+            <p class="comments-pname">NAME</p>
             <input
                 type="text"
                 name="comment-name"
                 id="comment-name"
                 placeholder="Enter your name"
             />
-            <p class="comment-p">COMMENT</p>
+            <p class="comments-p">COMMENT</p>
             <input
                 type="text"
                 name="comment-text"
@@ -96,19 +97,19 @@
                 placeholder="Add a new comment"
             />
             <button type="submit">COMMENT</button>
-            </form>
+        </form>
             <div>
             <ul id="comments"></ul>
-    </div>
+            </div>
     </section>
     </main>
     <footer class="footer">
         <div class="footer__main">
             <h1 class="footer__title">Get in Touch</h1>
             <div class="footer__socialmedia">
-                <a class="footer__social-link" href="https://www.instagram.com"><img src="./assets/icons/SVG/Icon-instagram.svg" alt="Instagram Logo"></a>
-                <a class="footer__social-link" href="https://www.facebook.com"><img src="./assets/icons/SVG/Icon-facebook.svg" alt="Facebook Logo"></a>
-                <a class="footer__social-link" href="https://www.twitter.com"><img src="./assets/icons/SVG/Icon-twitter.svg" alt="Twitter Logo"></a>
+                <a class="footer__socialmedia-link" href="https://www.instagram.com"><img src="./assets/icons/SVG/Icon-instagram.svg" alt="Instagram Logo"></a>
+                <a class="footer__socialmedia-link" href="https://www.facebook.com"><img src="./assets/icons/SVG/Icon-facebook.svg" alt="Facebook Logo"></a>
+                <a class="footer__socialmedia-link" href="https://www.twitter.com"><img src="./assets/icons/SVG/Icon-twitter.svg" alt="Twitter Logo"></a>
             </div>
         </div>
         <section class="footer__contact-container">
@@ -120,16 +121,16 @@
             <div class="footer__contact">
                 <h2 class="footer__contact-name">Pearl Gregg</br>Limitless Artist Group</h2>
                 <h4 class="footer__contact-location">Booking Agent for</br>US / South America / Japan</h4>
-                <a class="footer__contact-link" href="mailto:pearl.gregg@limitlessag.com"><h4 class="footer__contact-link">marsha.vlasic@artistgrp.com</h4></a>
+                <a class="footer__contact-link" href="mailto:pearl.gregg@limitlessag.com"><h4 class="footer__contact-link">pearl.gregg@limitlessag.com</h4></a>
             </div>
             <div class="footer__contact">
                 <h2 class="footer__contact-name">Carson Whyte</br>Arch Entertainment </h2>
                 <h4 class="footer__contact-location">Booking Agent for</br>UK / EU / AU</h4>
-                <a class="footer__contact-link" href="mailto:cwhyte@archentertainment.com"><h4 class="footer__contact-link">RLW@wmeentertainment.com</h4></a>
+                <a class="footer__contact-link" href="mailto:cwhyte@archentertainment.com"><h4 class="footer__contact-link">cwhyte@archentertainment.com</h4></a>
             </div>
         </section>
             <a href="./index.html"><img src="./assets/logos/Logo/Logo-bandsite.svg" alt="Banditse Logo"></a>
-            <div>Copyright The Bees Knees © 2021 All Rights Reserved</div>
+            <div class="footer__copyrighttext">Copyright The Bees Knees © 2021 All Rights Reserved</div>
     </footer>
 </body>
 <script src="./scripts/index.page.js"></script>

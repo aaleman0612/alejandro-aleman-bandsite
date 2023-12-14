@@ -1,7 +1,4 @@
-@use "../mixins" as *;
-@use "./partials/typography" as *;
-
-.comment {
+.comments {
   color: $black;
   border-bottom: 2px solid $mercury;
   border-top: 2px solid $mercury;
@@ -22,7 +19,7 @@
     flex-grow: 1;
   }
 
-  &__header {
+  &__title {
     display: flex;
     justify-content: space-between;
     padding-bottom: 0.5rem;
@@ -35,16 +32,12 @@
   &__date {
     color: $silver;
   }
-}
-
-.form {
-  &__img {
-    display: flex;
-    width: 2rem;
-    border-radius: 10px;
+    
   }
 
-  &__label {
+
+.form {
+    &__label {
     @include mobile-label;
     text-transform: uppercase;
     color: $silver;
@@ -126,12 +119,12 @@
 }
 
 #comment-name::placeholder {
-  color: $secondary-color;
+  color: $white;
 }
 
 button {
-  background-color: $secondary-color;
-  color: $primary-color;
+  background-color: $black;
+  color: $white;
   border: none;
   border-radius: 4px;
   width: 82%;

@@ -1,5 +1,5 @@
-@use "./partials/mixins" as mixins;
-@use "./partials/typography" as *;
+@use "./partials/mixins" as mixin;
+@use "./partials/typography" as typography;
 
 * {
   margin: 0;
@@ -12,3 +12,13 @@ body {
   margin: 0;
   padding: 0;
 }
+
+@import "./partials/colors";
+@import "./partials/typography";
+@import "./partials/mixins";
+@import "./partials/navbar";
+@import "./partials/about";
+@import "./partials/photogallery";
+@import "./partials/comments";
+@import "./partials/footer";
+@import "./partials/header";
