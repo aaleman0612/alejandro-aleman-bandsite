@@ -5,12 +5,14 @@
   padding-top: 1rem;
   padding-bottom: 0.75rem;
   display: flex;
+  flex-direction: column;
   justify-content: start;
 
   &__title {
     display: flex;
     justify-content: space-between;
     padding-bottom: 0.5rem;
+    margin-left: 1rem;
   }
 
   &__img {
@@ -18,7 +20,9 @@
     width: 2.25rem;
     height: 2.25rem;
     border-radius: 50%;
-    flex-shrink: 0;
+    position: absolute;
+    margin-top: 3.4rem;
+    margin-left: 1rem;
   }
 
   &__container {
@@ -34,33 +38,11 @@
   }
 }
 
-.form {
-  &__label {
-    @include mobile-label;
-    text-transform: uppercase;
-    color: $silver;
-  }
-
-  &__input {
-    box-sizing: border-box;
-    padding: 0.75rem;
-    border-radius: 4px;
-  }
-
-  &__textarea {
-    box-sizing: border-box;
-    padding: 0.75rem;
-    border-radius: 4px;
-    resize: none;
-  }
-
-  &__button {
-    @include mobile-subheader;
-    text-transform: uppercase;
-    background-color: $black;
-    color: $white;
-    border: none;
-  }
+.comments-form {
+  color: $mercury;
+  margin-left: 4rem;
+  font-size: 0.75rem;
+  margin-bottom: 0.4rem;
 }
 
 #comment-form {
@@ -75,28 +57,29 @@
 }
 
 #comment-text {
+  display: flex;
   background-color: $alabaster;
   border-color: $mercury;
   border-radius: 4px;
   border-width: 1px;
-  width: 80%;
+  width: 72%;
   height: 8rem;
-  margin-left: 3rem;
+  margin-left: 4rem;
   margin-bottom: 1rem;
   padding-left: 0.6rem;
   text-align: start;
-  margin-right: 10px;
+  margin-right: 2rem;
 }
 
 .comments-p {
   color: $mercury;
-  margin-left: 3rem;
+  margin-left: 4rem;
   margin-top: 1rem;
-  font-size: 12px;
+  font-size: .75rem;
   margin-bottom: 0.4rem;
 }
 
-.comments-pname {
+.comment-text {
   color: $mercury;
   margin-left: 1rem;
   font-size: 12px;
@@ -108,8 +91,12 @@
   border-color: $mercury;
   border-radius: 4px;
   border-width: 1px;
-  width: 80%;
-  margin-left: 3rem;
+  width: 72%;
+  margin-left: 4rem;
+  margin-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.5rem;
 }
 
 #comment-text::placeholder {
@@ -117,7 +104,7 @@
 }
 
 #comment-name::placeholder {
-  color: $white;
+  color: $black;
 }
 
 button {
@@ -125,13 +112,13 @@ button {
   color: $white;
   border: none;
   border-radius: 4px;
-  width: 82%;
+  width: 77%;
   height: 3rem;
   font-size: large;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 3rem;
+  margin-left: 4rem;
 }
 
 button:hover {

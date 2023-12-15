@@ -298,19 +298,23 @@ body {
   padding-top: 1rem;
   padding-bottom: 0.75rem;
   display: flex;
+  flex-direction: column;
   justify-content: start;
 }
 .comments__title {
   display: flex;
   justify-content: space-between;
   padding-bottom: 0.5rem;
+  margin-left: 1rem;
 }
 .comments__img {
   background-color: #e1e1e1;
   width: 2.25rem;
   height: 2.25rem;
   border-radius: 50%;
-  flex-shrink: 0;
+  position: absolute;
+  margin-top: 3.4rem;
+  margin-left: 1rem;
 }
 .comments__container {
   flex-grow: 1;
@@ -322,32 +326,11 @@ body {
   color: #afafaf;
 }
 
-.form__label {
-  font-weight: 600;
-  font-size: 0.625rem;
-  line-height: 1.25rem;
-  text-transform: uppercase;
-  color: #afafaf;
-}
-.form__input {
-  box-sizing: border-box;
-  padding: 0.75rem;
-  border-radius: 4px;
-}
-.form__textarea {
-  box-sizing: border-box;
-  padding: 0.75rem;
-  border-radius: 4px;
-  resize: none;
-}
-.form__button {
-  font-weight: 600;
-  font-size: 0.875rem;
-  line-height: 1.275rem;
-  text-transform: uppercase;
-  background-color: #323232;
-  color: #ffffff;
-  border: none;
+.comments-form {
+  color: #e1e1e1;
+  margin-left: 4rem;
+  font-size: 0.75rem;
+  margin-bottom: 0.4rem;
 }
 
 #comment-form {
@@ -362,28 +345,29 @@ body {
 }
 
 #comment-text {
+  display: flex;
   background-color: #fafafa;
   border-color: #e1e1e1;
   border-radius: 4px;
   border-width: 1px;
-  width: 80%;
+  width: 72%;
   height: 8rem;
-  margin-left: 3rem;
+  margin-left: 4rem;
   margin-bottom: 1rem;
   padding-left: 0.6rem;
   text-align: start;
-  margin-right: 10px;
+  margin-right: 2rem;
 }
 
 .comments-p {
   color: #e1e1e1;
-  margin-left: 3rem;
+  margin-left: 4rem;
   margin-top: 1rem;
-  font-size: 12px;
+  font-size: 0.75rem;
   margin-bottom: 0.4rem;
 }
 
-.comments-pname {
+.comment-text {
   color: #e1e1e1;
   margin-left: 1rem;
   font-size: 12px;
@@ -395,8 +379,12 @@ body {
   border-color: #e1e1e1;
   border-radius: 4px;
   border-width: 1px;
-  width: 80%;
-  margin-left: 3rem;
+  width: 72%;
+  margin-left: 4rem;
+  margin-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.5rem;
 }
 
 #comment-text::-moz-placeholder {
@@ -408,11 +396,11 @@ body {
 }
 
 #comment-name::-moz-placeholder {
-  color: #ffffff;
+  color: #323232;
 }
 
 #comment-name::placeholder {
-  color: #ffffff;
+  color: #323232;
 }
 
 button {
@@ -420,13 +408,13 @@ button {
   color: #ffffff;
   border: none;
   border-radius: 4px;
-  width: 82%;
+  width: 77%;
   height: 3rem;
   font-size: large;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 3rem;
+  margin-left: 4rem;
 }
 
 button:hover {
@@ -556,7 +544,7 @@ button:hover {
   position: relative;
   text-align: center;
   background: url("../../assets/Images/Images/hero-bio.jpg") center center/cover;
-  height: 50vh;
+  height: 45vh;
   width: 100%;
 }
 .image-container::after {
@@ -582,7 +570,7 @@ button:hover {
   z-index: 5;
 }
 .image-container__text {
-  font-size: 25px;
+  font-size: 1.6rem;
   color: #ffffff;
   padding: 1.4rem;
 }/*# sourceMappingURL=bio.css.map */
