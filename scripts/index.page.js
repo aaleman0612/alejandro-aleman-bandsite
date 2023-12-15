@@ -5,17 +5,12 @@ function createCommentElement(obj) {
     ? obj.timestamp
     : new Date().toLocaleDateString()
 
-    const newHeader = document.createElement('h3')
-    newTimestamp.classList.add('comment-name')
-    newHeader.textContent = obj.name
-
     const newParagraph = document.createElement('p')
     newTimestamp.classList.add('comment-value')
     newParagraph.textContent = obj.value
 
     const newComment = document.createElement('li')
-    newComment.classList.add('comment')
-    newComment.appendChild(newHeader)
+    newComment.classList.add('comments')
     newComment.appendChild(newTimestamp)
     newComment.appendChild(newParagraph)
 
@@ -23,7 +18,7 @@ function createCommentElement(obj) {
 }
 
 const test = document
-    .getElementById('comment-form')
+    .getElementById('comments-form')
     
     .addEventListener('submit', function (event) {
     event.preventDefault()

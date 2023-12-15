@@ -415,6 +415,7 @@ button {
   align-items: center;
   justify-content: center;
   margin-left: 4rem;
+  margin-bottom: 1rem;
 }
 
 button:hover {
@@ -435,9 +436,24 @@ button:hover {
   display: flex;
 }
 
+.comment-timestamp {
+  color: #afafaf;
+  margin-left: 15rem;
+}
+
+p {
+  margin-left: 4rem;
+  margin-right: 1rem;
+  color: #323232;
+}
+
+#comments {
+  color: #323232;
+}
+
 .footer {
   background-color: #323232;
-  color: #ffffff;
+  color: #FFFFFF;
   padding: 0 1rem;
   font-family: "avenir-regular";
   font-size: 0.8125rem;
@@ -464,7 +480,7 @@ button:hover {
   padding-bottom: 1.25rem;
 }
 .footer__contact-location, .footer__contact-link {
-  color: #ffffff;
+  color: #FFFFFF;
   text-decoration: none;
   margin-bottom: 1.25rem;
   font-weight: 100;
@@ -571,6 +587,6 @@ button:hover {
 }
 .image-container__text {
   font-size: 1.6rem;
-  color: #ffffff;
+  color: #FFFFFF;
   padding: 1.4rem;
 }/*# sourceMappingURL=bio.css.map */

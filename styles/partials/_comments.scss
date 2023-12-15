@@ -75,7 +75,7 @@
   color: $mercury;
   margin-left: 4rem;
   margin-top: 1rem;
-  font-size: .75rem;
+  font-size: 0.75rem;
   margin-bottom: 0.4rem;
 }
 
@@ -119,6 +119,7 @@ button {
   align-items: center;
   justify-content: center;
   margin-left: 4rem;
+  margin-bottom: 1rem;
 }
 
 button:hover {
@@ -137,4 +138,19 @@ button:hover {
 
 .comment {
   display: flex;
+}
+
+.comment-timestamp {
+  color: $silver;
+  margin-left: 15rem;
+}
+
+p {
+  margin-left: 4rem;
+  margin-right: 1rem;
+  color: $black;
+}
+
+#comments {
+  color: $black;
 }

@@ -1,3 +1,11 @@
+$mercury: #E1E1E1;
+$alabaster: #FAFAFA;
+$white: #FFFFFF;
+$silver: #AFAFAF;
+$black: #323232;
+
+@import "../partials/mixins";
+
 .footer {
   background-color: $black;
   color: $white;

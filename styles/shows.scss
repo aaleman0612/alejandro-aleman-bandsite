@@ -1,7 +1,7 @@
 @use "./partials/mixins" as mixin;
 @use "./partials/typography" as typography;
 
-@import './partials/footer';
+@import "./partials/footer";
 
 * {
   margin: 0;
@@ -97,67 +97,38 @@ body {
   }
 }
 
-.shows-hero {
-  position: relative;
-  width: 100%;
-  text-align: center;
-
-  &__herotext-header {
-    color: red;
-  }
-
-  &__image {
-    width: 100%;
-    height: auto;
-    opacity: 50%;
-  }
-
-  &__iframe {
-    width: 100%;
-    height: 100%;
-    padding: 1rem;
-  }
-
-  // &__centered-text {
-  //   position: absolute;
-  //   top: 33%;
-  //   left: 30%;
-  //   transform: translate(-50%, -50%);
-  // }
-
-  // &__text {
-  //   font-size: 18px;
-  //   color: #fff;
-  //   padding-left: 1.5rem;
-  // }
-  // &__texts {
-  //   color: #fff;
-  //   padding-left: 1.5rem;
-  // }
-  &__song {
+.hero {
+  background-image: url(../assets/Images/Images/hero-shows.jpg);
+  @include background;
+  height: 25rem;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-content: left;
+  &__opacity {
+    background-color: rgba($color: black, $alpha: 0.5);
+    height: inherit;
+    width: inherit;
     display: flex;
-    align-items: center;
-    z-index: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 4rem 1rem 2rem 1rem;
   }
-}
-
-.header {
-  position: relative;
-}
-
-.image-container__song {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 140px;
-  z-index: 1;
-}
-
-.image-container__song-info {
-  font-size: 12px;
-  color: #cccccc;
-  line-height: 1.2;
+  &__title {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    padding-bottom: 1rem;
+    &-main {
+      font-size: 2.25rem;
+      line-height: 2.75rem;
+      padding-bottom: 4rem;
+    }
+    &-song-set {
+      width: 18rem;
+      height: 6rem;
+    }
+  }
 }
 
 .footer {
