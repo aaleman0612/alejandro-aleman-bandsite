@@ -300,6 +300,11 @@ body {
   display: flex;
   justify-content: start;
 }
+.comments__title {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0.5rem;
+}
 .comments__img {
   background-color: #e1e1e1;
   width: 2.25rem;
@@ -309,11 +314,6 @@ body {
 }
 .comments__container {
   flex-grow: 1;
-}
-.comments__title {
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 0.5rem;
 }
 .comments__name {
   font-weight: 600;
@@ -375,7 +375,7 @@ body {
   margin-right: 10px;
 }
 
-.comment-p {
+.comments-p {
   color: #e1e1e1;
   margin-left: 3rem;
   margin-top: 1rem;
@@ -383,7 +383,7 @@ body {
   margin-bottom: 0.4rem;
 }
 
-.comment-pname {
+.comments-pname {
   color: #e1e1e1;
   margin-left: 1rem;
   font-size: 12px;

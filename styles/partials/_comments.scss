@@ -7,6 +7,12 @@
   display: flex;
   justify-content: start;
 
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0.5rem;
+  }
+
   &__img {
     background-color: $mercury;
     width: 2.25rem;
@@ -19,12 +25,6 @@
     flex-grow: 1;
   }
 
-  &__title {
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 0.5rem;
-  }
-
   &__name {
     font-weight: 600;
   }
@@ -32,12 +32,10 @@
   &__date {
     color: $silver;
   }
-    
-  }
-
+}
 
 .form {
-    &__label {
+  &__label {
     @include mobile-label;
     text-transform: uppercase;
     color: $silver;
@@ -90,7 +88,7 @@
   margin-right: 10px;
 }
 
-.comment-p {
+.comments-p {
   color: $mercury;
   margin-left: 3rem;
   margin-top: 1rem;
@@ -98,7 +96,7 @@
   margin-bottom: 0.4rem;
 }
 
-.comment-pname {
+.comments-pname {
   color: $mercury;
   margin-left: 1rem;
   font-size: 12px;
