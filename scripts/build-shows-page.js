@@ -1,3 +1,5 @@
+// const backend = new BandsiteApi("9f1a48c6-ff0e-44dc-8248-d4e3440a409c")
+
 const showsArray = [
     {
       date: "Mon Sept 06 2021",
@@ -100,3 +102,18 @@ const showsArray = [
   }
   
   renderShows();
+
+//   async function displayShows() {
+//   try {
+//     const Shows = await backend.getShows();
+//     console.log(Shows);
+
+//     for (const showDay of Shows) {
+//       displayShow(showDay);
+//     }
+//   } catch (error) {
+//     console.log.error(error);
+//   }
+// }
+
+// displayShows();
