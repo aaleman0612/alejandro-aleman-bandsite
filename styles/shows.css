@@ -106,11 +106,11 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 html,
 body {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -123,84 +123,117 @@ body {
 body a {
   text-decoration: none;
   color: inherit;
-  text-align: start;
-  padding-top: 1rem;
 }
 body ul {
   list-style-type: none;
 }
 
-.bandsite-logo {
-  text-align: center;
-  padding-bottom: 0.5rem;
-}
-
-.nav-bar {
+.header__nav {
+  font-family: "avenir-regular";
+  width: 100%;
+  height: 5rem;
   background-color: #323232;
-  margin: 0;
-  color: #FFFFFF;
-}
-@media only screen and (min-width: 768px) {
-  .nav-bar {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding-top: 2rem;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .nav-bar__outer {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-  }
-}
-.nav-bar__inner {
+  color: #AFAFAF;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  padding-top: 0.8rem;
+  justify-content: center;
+  align-items: center;
 }
-@media only screen and (min-width: 768px) {
-  .nav-bar__inner {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
+.header__nav-logo-container {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
 }
-.nav-bar__logo {
-  margin: 0;
-  padding: 0;
-  text-align: center;
+.header__nav-image {
+  width: 7.5rem;
+  margin-bottom: 0.5rem;
 }
-.nav-bar__items {
+.header__nav-menu {
+  list-style: none;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  margin: 0;
-  padding: 0;
-  text-align: center;
+  justify-content: space-around;
+  margin-top: 0.5rem;
   width: 100%;
 }
-.nav-bar__items--bio {
-  padding: 0;
-  color: #FFFFFF;
-  width: 50%;
-  padding-bottom: 0.6rem;
+.header__nav-menu-item {
+  width: 50vw;
+  text-align: center;
+  border-bottom: 0.2125rem solid transparent;
 }
-.nav-bar__items--shows {
-  width: 50%;
-  color: #FFFFFF;
-  border-bottom: 0.2rem solid white;
+.header__nav-menu-item-link {
+  text-decoration: none;
+  display: block;
+  padding-bottom: 0.44rem;
+  color: #AFAFAF;
 }
-@media only screen and (min-width: 768px) {
-  .nav-bar {
-    width: 100%;
-    padding-left: 2rem;
-  }
+.header__nav-menu-item-link:hover {
+  border-bottom: 0.4125rem solid #FFFFFF;
+}
+.header__nav-menu-item #active {
+  color: #FFFFFF;
+  border-bottom: 0.4125rem solid #FFFFFF;
 }
 
+@media only screen and (min-width: 768px) {
+  .header__nav {
+    flex-direction: row;
+  }
+  .header__nav-logo-container {
+    margin-top: 0px;
+  }
+  .header__nav-image {
+    width: 7.5rem;
+    margin-bottom: 0rem;
+    margin-left: 1.5rem;
+  }
+  .header__nav-menu {
+    justify-content: left;
+    align-items: center;
+    margin-top: 0px;
+    height: 5rem;
+  }
+  .header__nav-menu-item {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    height: 5rem;
+    width: 5rem;
+    border-bottom: unset;
+    margin-left: 3.5rem;
+  }
+  .header__nav-menu-item-link {
+    width: 5rem;
+    display: block;
+    margin-top: 0.7125rem;
+    padding-bottom: 1.4rem;
+    padding-top: 1.5rem;
+    border-bottom: 0.4125rem solid transparent;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .header__nav-logo-container {
+    margin-top: 0px;
+  }
+  .header__nav-image {
+    width: 7.5rem;
+    margin-bottom: 0rem;
+    margin-left: 11.25rem;
+    margin-right: 1.75rem;
+  }
+  .header__nav-menu {
+    justify-content: left;
+    margin-top: 0px;
+  }
+  .header__nav-menu-item {
+    margin-left: 1.75rem;
+    margin-right: 1.75rem;
+    border-bottom: unset;
+  }
+  .header__nav-menu-item-link {
+    border-bottom: 0.4125rem solid transparent;
+  }
+}
 .hero {
   background-image: url(../assets/Images/Images/hero-shows.jpg);
   background-position: center;
