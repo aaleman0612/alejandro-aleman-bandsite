@@ -30,7 +30,7 @@ body {
 }
 
 .header__nav {
-  font-family: 'avenir-regular';
+  font-family: "avenir-regular";
   width: 100%;
   height: 5rem;
   background-color: $black;
@@ -40,103 +40,103 @@ body {
   justify-content: center;
   align-items: center;
   &-logo-container {
-      margin-top: 1rem;
-      display: flex;
-      justify-content: center;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
   }
   &-image {
-      width: 7.5rem;
-      margin-bottom: 0.5rem;
+    width: 7.5rem;
+    margin-bottom: 0.5rem;
   }
   &-menu {
-      list-style: none;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      margin-top: 0.5rem;
-      width: 100%;
-      &-item {
-          width: 50vw;
-          text-align: center;
-          border-bottom: 0.2125rem solid transparent;
-          &-link {
-          text-decoration: none;
-          display: block;
-          padding-bottom: 0.44rem;
-          color: $silver;
-          &:hover {
-              border-bottom: 0.4125rem solid $white;
-          }
-          }
-      }
-
-      &-item #active {
-          color: $white;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 0.5rem;
+    width: 100%;
+    &-item {
+      width: 50vw;
+      text-align: center;
+      border-bottom: 0.2125rem solid transparent;
+      &-link {
+        text-decoration: none;
+        display: block;
+        padding-bottom: 0.44rem;
+        color: $silver;
+        &:hover {
           border-bottom: 0.4125rem solid $white;
+        }
       }
+    }
+
+    &-item #active {
+      color: $white;
+      border-bottom: 0.4125rem solid $white;
+    }
   }
 }
 
 @include tablet {
   .header__nav {
-      flex-direction: row;
-      &-logo-container {
-          margin-top: 0px;
+    flex-direction: row;
+    &-logo-container {
+      margin-top: 0px;
+    }
+    &-image {
+      width: 7.5rem;
+      margin-bottom: 0rem;
+      margin-left: 1.5rem;
+    }
+    &-menu {
+      justify-content: left;
+      align-items: center;
+      margin-top: 0px;
+      height: 5rem;
+      &-item {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        height: 5rem;
+        width: 5rem;
+        border-bottom: unset;
+        margin-left: 3.5rem;
+        &-link {
+          width: 5rem;
+          display: block;
+          margin-top: 0.7125rem;
+          padding-bottom: 1.4rem;
+          padding-top: 1.5rem;
+          border-bottom: 0.4125rem solid transparent;
+        }
       }
-      &-image {
-          width: 7.5rem;
-          margin-bottom: 0rem;
-          margin-left: 1.5rem;
-      }
-      &-menu {
-          justify-content: left;
-          align-items: center;
-          margin-top: 0px;
-          height: 5rem;
-          &-item {
-              display: flex;
-              align-items: center;
-              text-align: center;
-              height: 5rem;
-              width: 5rem;
-              border-bottom: unset;
-              margin-left: 3.5rem;
-              &-link {
-                  width: 5rem;
-                  display: block;
-                  margin-top: .7125rem;
-                  padding-bottom: 1.4rem;
-                  padding-top: 1.5rem;
-                  border-bottom: 0.4125rem solid transparent;
-              }
-          }
-      }
+    }
   }
 }
 
 @include desktop {
   .header__nav {
-      &-logo-container {
-          margin-top: 0px;
+    &-logo-container {
+      margin-top: 0px;
+    }
+    &-image {
+      width: 7.5rem;
+      margin-bottom: 0rem;
+      margin-left: 11.25rem;
+      margin-right: 1.75rem;
+    }
+    &-menu {
+      justify-content: left;
+      margin-top: 0px;
+      &-item {
+        margin-left: 1.75rem;
+        margin-right: 1.75rem;
+        border-bottom: unset;
+        &-link {
+          border-bottom: 0.4125rem solid transparent;
+        }
       }
-      &-image {
-          width: 7.5rem;
-          margin-bottom: 0rem;
-          margin-left: 11.25rem;
-          margin-right: 1.75rem;
-      }
-      &-menu {
-          justify-content: left;
-          margin-top: 0px;
-          &-item {
-              margin-left: 1.75rem;
-              margin-right: 1.75rem;
-              border-bottom: unset;
-              &-link {
-                  border-bottom: 0.4125rem solid transparent
-              }
-          }
-      }
+    }
   }
 }
 
@@ -275,60 +275,72 @@ body {
   }
 }
 
-.js-shows {
-  margin-bottom: 1rem;
-  max-width: 100%;
+.show__header {
+  @include tablet {
+    width: 20%;
+  }
+  &--location {
+    width: 40%;
+  }
 }
 
-.upcoming-shows {
-  &__header {
-    display: flex;
-    flex-direction: column;
-    margin-top: 1rem;
-    padding-left: 1rem;
-    padding-top: 1rem;
+
+.show {
+padding: 1rem 1rem;
+border-bottom: 0.125rem solid $mercury;
+&:hover {
+  transform: scale(1.1);
+  background-color: $alabaster;
+}
+@include tablet {
+  margin-left: 22rem;
+  padding: 0, 1.5rem;
+  display: flex;
+  align-items: center;
+}
+&__selected {
+  background-color: $mercury;
+}
+&__header--mobile {
+  color: $mercury;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  @include tablet {
+    display: none;
   }
-
-  &__containers {
-    :hover {
-      background-color: $silver;
-    }
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: start;
-
-    padding: 1rem;
-    border-bottom: 0.125rem silver solid;
-
-    &--button {
-      border-radius: 0.3125rem;
-      color: $white;
-      background-color: $black;
-      width: 18rem;
-      height: 3.125rem;
-      font-size: 1.125rem;
-    }
-
-    &--titles {
-      color: $silver;
-      text-transform: uppercase;
-      font-weight: 100;
-      font-size: 0.875rem;
-      letter-spacing: 0.0313rem;
-      margin-top: 1rem;
-      margin-bottom: 0.25rem;
-
-      &--venue-location {
-        margin-bottom: 0.5rem;
-      }
-
-      &-sub {
-        font-family: "AvenirDemi";
-        font-size: 1rem;
-        margin-top: 0;
-      }
-    }
+}
+&__date {
+  font-weight: 600;
+  @include tablet {
+    width: 25%;
+    font-weight: 600;
   }
+}
+&__venue {
+  @include tablet {
+    width: 25%;
+  }
+}
+&__location {
+  @include tablet {
+    width: 25%;
+  }
+}
+&__btn {
+  height: 2.5rem;
+  width: 100%;
+  background-color: $black;
+  color: $white;
+  border-radius: 4px;
+  margin-top: 1rem;
+  margin-top: 1rem;
+  @include tablet {
+    width: 25%;
+  }
+}
+}
+
+.booking__title {
+  padding-left: 1rem;
+  padding-top: 1rem;
 }

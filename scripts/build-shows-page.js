@@ -1,119 +1,98 @@
-// const backend = new BandsiteApi("9f1a48c6-ff0e-44dc-8248-d4e3440a409c")
+const backend = new BandSiteApi("ccad939c-f2fb-4106-a32b-687171a50ce7");
 
-const showsArray = [
-    {
-      date: "Mon Sept 06 2021",
-      venue: "Ronald Lane",
-      location: "San Francisco, CA",
-    },
-    {
-      date: "Tue Sept 21 2021",
-      venue: "Pier 3 East",
-      location: "San Francisco, CA",
-    },
-    {
-      date: "Fri Oct 15 2021",
-      venue: "View Lounge",
-      location: "San Francisco, CA",
-    },
-    {
-      date: "Sat Nov 06 2021",
-      venue: "Hyatt Agency",
-      location: "San Francisco, CA",
-    },
-    {
-      date: "Fri Nov 26 2021",
-      venue: "Moscow Center",
-      location: "San Francisco, CA",
-    },
-    {
-      date: "Wed Dec 15 2021",
-      venue: "Press Club",
-      location: "San Francisco, CA",
-    },
-  ];
-  
-  function createShows(shows) {
-    const showContainer = document.createElement("div");
-    showContainer.classList.add("upcoming-shows__containers");
-  
-    const miniContainer = document.createElement("div");
-    miniContainer.classList.add("upcoming-shows__containers__mini");
-    showContainer.appendChild(miniContainer);
-  
-    const showDate = document.createElement("p");
-    showDate.classList.add("upcoming-shows__containers--titles");
-    showDate.innerText = "Date";
-    miniContainer.appendChild(showDate);
-  
-    const showDate2 = document.createElement("p");
-    showDate2.classList.add("upcoming-shows__containers--titles-sub");
-    showDate2.innerText = shows.date;
-    miniContainer.appendChild(showDate2);
+const bookingSection = document.querySelector(".booking--section");
 
-    const miniContainer2 = document.createElement("div");
-    miniContainer2.classList.add("upcoming-shows__containers__mini");
-    showContainer.appendChild(miniContainer2);
-  
-    const showVenue = document.createElement("p");
-    showVenue.classList.add("upcoming-shows__containers--titles");
-    showVenue.innerText = "Venue";
-    miniContainer2.appendChild(showVenue);
-  
-    const showVenue2 = document.createElement("p");
-    showVenue2.classList.add(
-      "upcoming-shows__containers--titles--venue-location"
-    );
-    showVenue2.innerText = shows.venue;
-    miniContainer2.appendChild(showVenue2);
+const booking = document.createElement("div");
+booking.classList.add("booking");
+bookingSection.appendChild(booking);
 
-    const miniContainer3 = document.createElement("div");
-    miniContainer3.classList.add("upcoming-shows__containers__mini");
-    showContainer.appendChild(miniContainer3);
-  
-    const showLocation = document.createElement("p");
-    showLocation.classList.add("upcoming-shows__containers--titles");
-    showLocation.innerText = "Location";
-    miniContainer3.appendChild(showLocation);
-  
-    const showLocation2 = document.createElement("p");
-    showLocation2.classList.add(
-      "upcoming-shows__containers--titles--venue-location"
-    );
-    showLocation2.innerText = shows.location;
-    miniContainer3.appendChild(showLocation2);
-  
-    const button = document.createElement("button");
-    button.classList.add("upcoming-shows__containers--button");
-    button.innerText = "BUY TICKETS";
-    showContainer.append(button);
-  
-    return showContainer;
-  }
-  
-  function renderShows() {
-    const showsWrapper = document.querySelector(".js-shows");
-    showsWrapper.innerHTML = "";
-  
-    for (let i = 0; i < showsArray.length; i++) {
-      const showCard = createShows(showsArray[i]);
-      showsWrapper.appendChild(showCard);
+const bookingTitle = document.createElement("h2");
+bookingTitle.classList.add("booking__title");
+booking.appendChild(bookingTitle);
+bookingTitle.textContent = "Shows";
+
+const bookingTablet = document.createElement("div");
+bookingTablet.classList.add("booking__tablet");
+booking.appendChild(bookingTablet);
+
+const showHeader = document.createElement("p");
+showHeader.classList.add("show__header");
+bookingTablet.appendChild(showHeader);
+
+const showHeaderVenue = document.createElement("p");
+showHeaderVenue.classList.add("show__header");
+bookingTablet.appendChild(showHeaderVenue);
+
+const showHeaderLoc = document.createElement("p");
+showHeaderLoc.classList.add("show__header");
+bookingTablet.appendChild(showHeaderLoc);
+
+function displayShow(showObject) {
+  const show = document.createElement("div");
+  show.classList.add("show");
+
+  const showHeaderMobile = document.createElement("p");
+  showHeaderMobile.classList.add("show__header--mobile");
+  show.appendChild(showHeaderMobile);
+  showHeaderMobile.textContent = "Date";
+
+  const showDate = document.createElement("p");
+  showDate.classList.add("show__date");
+  show.appendChild(showDate);
+
+  const showHeaderMobileV = document.createElement("p");
+  showHeaderMobileV.classList.add("show__header--mobile");
+  show.appendChild(showHeaderMobileV);
+  showHeaderMobileV.textContent = "Venue";
+
+  const showVenue = document.createElement("p");
+  showVenue.classList.add("show__venue");
+  show.appendChild(showVenue);
+
+  const showHeadermobileL = document.createElement("p");
+  showHeadermobileL.classList.add("show__header--mobile");
+  show.appendChild(showHeadermobileL);
+  showHeadermobileL.textContent = "Location";
+
+  const showLocation = document.createElement("p");
+  showLocation.classList.add("show__location");
+  show.appendChild(showLocation);
+
+  const showBtn = document.createElement("button");
+  showBtn.classList.add("show__btn");
+  show.appendChild(showBtn);
+  showBtn.textContent = "BUY TICKET";
+
+  showDate.textContent = new Date(showObject.date).toDateString();
+  showVenue.textContent = showObject.place;
+  showLocation.textContent = showObject.location;
+
+  booking.appendChild(show);
+
+  show.addEventListener("click", function (e) {
+    const selectedShows = document.getElementsByClassName("show__selected");
+
+    if (selectedShows.length > 0) {
+      for (let index = 0; index < selectedShows.length; index++) {
+        const element = selectedShows[index];
+        element.classList.remove("show__selected");
+      }
     }
+
+    show.classList.add("show__selected");
+  });
+}
+async function displayShows() {
+  try {
+    const Shows = await backend.getShows();
+    console.log(Shows);
+
+    for (const showDay of Shows) {
+      displayShow(showDay);
+    }
+  } catch (error) {
+    console.log.error(error);
   }
-  
-  renderShows();
+}
 
-//   async function displayShows() {
-//   try {
-//     const Shows = await backend.getShows();
-//     console.log(Shows);
-
-//     for (const showDay of Shows) {
-//       displayShow(showDay);
-//     }
-//   } catch (error) {
-//     console.log.error(error);
-//   }
-// }
-
-// displayShows();
+displayShows();

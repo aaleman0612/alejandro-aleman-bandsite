@@ -374,51 +374,79 @@ body ul {
     justify-content: left;
   }
 }
-.js-shows {
-  margin-bottom: 1rem;
-  max-width: 100%;
+@media only screen and (min-width: 768px) {
+  .show__header {
+    width: 20%;
+  }
+}
+.show__header--location {
+  width: 40%;
 }
 
-.upcoming-shows__header {
-  display: flex;
-  flex-direction: column;
+.show {
+  padding: 1rem 1rem;
+  border-bottom: 0.125rem solid #E1E1E1;
+}
+.show:hover {
+  transform: scale(1.1);
+  background-color: #FAFAFA;
+}
+@media only screen and (min-width: 768px) {
+  .show {
+    margin-left: 22rem;
+    padding: 0, 1.5rem;
+    display: flex;
+    align-items: center;
+  }
+}
+.show__selected {
+  background-color: #E1E1E1;
+}
+.show__header--mobile {
+  color: #E1E1E1;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+@media only screen and (min-width: 768px) {
+  .show__header--mobile {
+    display: none;
+  }
+}
+.show__date {
+  font-weight: 600;
+}
+@media only screen and (min-width: 768px) {
+  .show__date {
+    width: 25%;
+    font-weight: 600;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .show__venue {
+    width: 25%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .show__location {
+    width: 25%;
+  }
+}
+.show__btn {
+  height: 2.5rem;
+  width: 100%;
+  background-color: #323232;
+  color: #FFFFFF;
+  border-radius: 4px;
   margin-top: 1rem;
+  margin-top: 1rem;
+}
+@media only screen and (min-width: 768px) {
+  .show__btn {
+    width: 25%;
+  }
+}
+
+.booking__title {
   padding-left: 1rem;
   padding-top: 1rem;
-}
-.upcoming-shows__containers {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: start;
-  padding: 1rem;
-  border-bottom: 0.125rem silver solid;
-}
-.upcoming-shows__containers :hover {
-  background-color: #AFAFAF;
-}
-.upcoming-shows__containers--button {
-  border-radius: 0.3125rem;
-  color: #FFFFFF;
-  background-color: #323232;
-  width: 18rem;
-  height: 3.125rem;
-  font-size: 1.125rem;
-}
-.upcoming-shows__containers--titles {
-  color: #AFAFAF;
-  text-transform: uppercase;
-  font-weight: 100;
-  font-size: 0.875rem;
-  letter-spacing: 0.0313rem;
-  margin-top: 1rem;
-  margin-bottom: 0.25rem;
-}
-.upcoming-shows__containers--titles--venue-location {
-  margin-bottom: 0.5rem;
-}
-.upcoming-shows__containers--titles-sub {
-  font-family: "AvenirDemi";
-  font-size: 1rem;
-  margin-top: 0;
 }/*# sourceMappingURL=shows.css.map */

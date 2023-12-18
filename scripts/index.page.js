@@ -1,5 +1,3 @@
-const backend = new BandsiteApi ("9f1a48c6-ff0e-44dc-8248-d4e3440a409c")
-
 function createCommentElement(obj) {
     const newTimestamp = document.createElement('p')
     newTimestamp.classList.add('comment-timestamp')
